@@ -2,6 +2,8 @@
 
 We now have a nifty little snippets file that'll let you drop whole snippets of b@se code for every function tag right into your file with Atom!
 
+![](http://design.neto.com.au/assets/uploads/69a2AQYNBO.gif)
+
 ## Installation Instructions
 
 * In Atom,  Select `File > Open Your Snippets` (On OSX, `Atom > Open Your Snippets`)
