@@ -101,7 +101,7 @@
 		"""
 	'Thumblist Content':
 		'prefix': 'thumbcontent'
-		'body': "[%thumb_list type:'content' content_type:'$1' template:'' limit:'99' filter_content:''/%]"
+		'body': "[%thumb_list type:'content' content_type:'$1' template:'' limit:'99' filter_category:'' filter_content:''/%]"
 
 	'Thumblist Products':
 		'prefix': 'thumbproducts'
