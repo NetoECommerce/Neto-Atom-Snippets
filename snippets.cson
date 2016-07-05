@@ -678,3 +678,76 @@
 			[%/param%]
 		[%/ebay_category_menu%]
 		"""
+
+# CSS Media Queries
+
+'.source.css':
+
+	'Mobile View CSS':
+		'prefix':'mobile_view_css'
+		'body':"""
+			@media (max-width: 767px) {
+
+			}
+		"""
+
+	'Tablet View CSS':
+		'prefix':'tablet_view_css'
+		'body':"""
+			@media (max-width: 991px) and (min-width: 768px) {
+
+			}
+		"""
+
+	'Laptop View CSS':
+		'prefix':'laptop_view_css'
+		'body':"""
+			@media (max-width: 1199px) and (min-width: 992px) {
+
+			}
+		"""
+
+	'Desktop View CSS':
+		'prefix':'desktop_view_css'
+		'body':"""
+			@media (min-width: 1200px) {
+
+			}
+		"""
+
+# LESS Media Queries
+
+'.source.less':
+
+	'Mobile View LESS':
+		'prefix':'mobile_view_less'
+		'body':"""
+			@media (max-width: @screen-xs-max) {
+
+			}
+		"""
+
+	'Tablet View LESS':
+		'prefix':'tablet_view_less'
+		'body':"""
+			@media (max-width: @screen-sm-max) and (min-width: 768px) {
+
+			}
+		"""
+
+	'Laptop View LESS':
+		'prefix':'laptop_view_less'
+		'body':"""
+			@media (max-width: @screen-md-max) and (min-width: 992px) {
+
+			}
+		"""
+
+	'Desktop View LESS':
+		'prefix':'desktop_view_less'
+		'body':"""
+			@media (min-width: @screen-lg) {
+
+			}
+		"""
+
