@@ -752,6 +752,9 @@
 		"""
 
 #Javascript snippets
+
+'.html':
+	
 	'setTimeout':
 		'prefix':'setTimeout()'
 		'body':"""
