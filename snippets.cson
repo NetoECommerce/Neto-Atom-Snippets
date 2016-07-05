@@ -750,3 +750,34 @@
 				$1
 			}
 		"""
+
+#Javascript snippets
+	'setTimeout':
+		'prefix':'setTimeout()'
+		'body':"""
+		setTimeout(function() {
+			$1
+		},2000);
+		"""
+
+	'setInterval':
+		'prefix':'setInterval()'
+		'body':"""
+		setInterval(function() {
+			$1
+		},2000);
+		"""
+
+	'function()':
+		'prefix':'function()'
+		'body':"""
+		function() {
+			$1
+		}
+		"""
+
+	'console.log()':
+		'prefix':'console.log()'
+		'body':"""
+		console.log($1)
+		"""
