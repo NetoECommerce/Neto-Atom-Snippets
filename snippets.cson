@@ -679,6 +679,38 @@
 		[%/ebay_category_menu%]
 		"""
 
+# Javascript snippets
+
+	'setTimeout':
+		'prefix':'setTimeout()'
+		'body':"""
+		setTimeout(function() {
+			$1
+		},2000);
+		"""
+
+	'setInterval':
+		'prefix':'setInterval()'
+		'body':"""
+		setInterval(function() {
+			$1
+		},2000);
+		"""
+
+	'function()':
+		'prefix':'function()'
+		'body':"""
+		function() {
+			$1
+		}
+		"""
+
+	'console.log()':
+		'prefix':'console.log()'
+		'body':"""
+		console.log($1)
+		"""
+
 # CSS Media Queries
 
 '.source.css':
@@ -749,38 +781,4 @@
 			@media (min-width: @screen-lg) {
 				$1
 			}
-		"""
-
-#Javascript snippets
-
-'.html':
-	
-	'setTimeout':
-		'prefix':'setTimeout()'
-		'body':"""
-		setTimeout(function() {
-			$1
-		},2000);
-		"""
-
-	'setInterval':
-		'prefix':'setInterval()'
-		'body':"""
-		setInterval(function() {
-			$1
-		},2000);
-		"""
-
-	'function()':
-		'prefix':'function()'
-		'body':"""
-		function() {
-			$1
-		}
-		"""
-
-	'console.log()':
-		'prefix':'console.log()'
-		'body':"""
-		console.log($1)
 		"""
