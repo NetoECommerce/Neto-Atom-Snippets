@@ -17,19 +17,19 @@
 		'prefix':'breadcrumb'
 		'body':"""
 		[%breadcrumb%]
-				[%param *header%]
-						<ul>
-						<li><a href="[%url page:'home'/%]">Home</a></li>
-				[%end param%]
-				[%param *body%]
-						<li><a href="[@url@]">[@name@]</a></li>
-				[%/param%]
-				[%param *body_current%]
-						<li>[@name@]</li>
-				[%/param%]
-				[%param *footer%]
-						</ul>
-				[%/param%]
+			[%param *header%]
+				<ul>
+					<li><a href="[%url page:'home'/%]">Home</a></li>
+			[%end param%]
+			[%param *body%]
+					<li><a href="[@url@]">[@name@]</a></li>
+			[%/param%]
+			[%param *body_current%]
+					<li>[@name@]</li>
+			[%/param%]
+			[%param *footer%]
+				</ul>
+			[%/param%]
 		[%/breadcrumb%]
 		"""
 	'Content zone':
@@ -39,25 +39,27 @@
 		'prefix':'content_menu'
 		'body':"""
 		[%content_menu content_type:'category' sortby:'sortorder' show_empty:'1'%]
-				[%param header%]
-						<ul>
-				[%/param%]
-				[%param *level_1%]
-						<li><a href="[@url@]">[@name@]</a>
+			[%param header%]
+				<ul>
+			[%/param%]
+			[%param *level_1%]
+					<li>
+						<a href="[@url@]">[@name@]</a>
 						[%if [@next_level@]%]<ul>[@next_level@]</ul>[%/if%]
-						</li>
-				[%/param%]
-				[%param *level_2%]
-						<li><a href="[@url@]">[@name@]</a>
+					</li>
+			[%/param%]
+			[%param *level_2%]
+					<li>
+						<a href="[@url@]">[@name@]</a>
 						[%if [@next_level@]%]<ul>[@next_level@]</ul>[%/if%]
-						</li>
-				[%/param%]
-				[%param *level_3%]
-						<li><a href="[@url@]">[@name@]</a></li>
-				[%/param%]
-				[%param footer%]
-						</ul>
-				[%/param%]
+					</li>
+			[%/param%]
+			[%param *level_3%]
+					<li><a href="[@url@]">[@name@]</a></li>
+			[%/param%]
+			[%param footer%]
+				</ul>
+			[%/param%]
 		[%/content_menu%]
 		"""
 	'Content Path':
@@ -78,25 +80,27 @@
 		'prefix':'Menu(Neto)'
 		'body':"""
 		[%menu id:'$1'%]
-				[%param header%]
-						<ul>
-				[%/param%]
-				[%param *level_1%]
-						<li><a href="[@url@]">[@name@]</a>
+			[%param header%]
+				<ul>
+			[%/param%]
+			[%param *level_1%]
+					<li>
+						<a href="[@url@]">[@name@]</a>
 						[%if [@next_level@]%]<ul>[@next_level@]</ul>[%/if%]
-						</li>
-				[%/param%]
-				[%param *level_2%]
-						<li><a href="[@url@]">[@name@]</a>
+					</li>
+			[%/param%]
+			[%param *level_2%]
+					<li>
+						<a href="[@url@]">[@name@]</a>
 						[%if [@next_level@]%]<ul>[@next_level@]</ul>[%/if%]
-						</li>
-				[%/param%]
-				[%param *level_3%]
-						<li><a href="[@url@]">[@name@]</a></li>
-				[%/param%]
-				[%param footer%]
-						</ul>
-				[%/param%]
+					</li>
+			[%/param%]
+			[%param *level_3%]
+					<li><a href="[@url@]">[@name@]</a></li>
+			[%/param%]
+			[%param footer%]
+				</ul>
+			[%/param%]
 		[%/menu%]
 		"""
 	'Thumblist Content':
@@ -108,12 +112,12 @@
 		'body':"""
 		[%thumb_list type:'products' template:'' filter_category:'$1' limit:'10'%]
 			[%param *header%]
-					All Products
+				All Products
 			[%/param%]
 			[%param *footer%]
 			[%/param%]
 			[%param *ifempty%]
-					No Results Found
+				No Results Found
 			[%/param%]
 		[%/thumb_list%]
 		"""
@@ -126,12 +130,12 @@
 			'prefix':'product_history'
 			'body':"""
 			[%product_history limit:'10' template:'$1'%]
-					[%param header%]
+				[%param header%]
 					$2
-					[%/param%]
-					[%param footer%]
+				[%/param%]
+				[%param footer%]
 					$3
-					[%/param%]
+				[%/param%]
 			[%/product_history%]
 			"""
 
@@ -222,7 +226,7 @@
 			[%param data1%]$1[%/param%]
 			[%param data2%]$2[%/param%]
 			[%param *body%]
-					$3[@data1@] [@data2@]
+				$3[@data1@] [@data2@]
 			[%/param%]
 		[%/split%]
 		"""
@@ -235,9 +239,7 @@
 		'prefix':'years'
 		'body':"""
 		[%years from:'$1-10' to:'$2+10'%]
-			[%param *body%]
-					[@year@]
-			[%/param%]
+			[%param *body%] [@year@] [%/param%]
 		[%/years%]
 		"""
 
@@ -249,9 +251,7 @@
 		'prefix':'months'
 		'body':"""
 		[%months%]
-			[%param *body%]
-					[@month@]
-			[%/param%]
+			[%param *body%] [@month@] [%/param%]
 		[%/months%]
 		"""
 
@@ -263,7 +263,7 @@
 		'prefix':'site_value(set)'
 		'body':"""
 		[%site_value id:'$1'%]
-				$2
+			$2
 		[%/site_value%]
 		"""
 
@@ -333,22 +333,22 @@
 		'prefix':'product_filter'
 		'body':"""
 		[%product_filter type:'$1category' limit:'$2 100' autohide:'$3 0' filter_parent_content:'$4 1'%]
-				[%param header%]$5
+			[%param header%]$5
 				<h4>Filter By Category</h4>
 				<ul>
-				[%/param%]
-				[%param *body%]$6
-						<li>
+			[%/param%]
+			[%param *body%]$6
+					<li>
 						[%if [@selected@]%]
-								<a href="[@remove_url@]" rel="nofollow">[@name@] [@total@]</a>
+							<a href="[@remove_url@]" rel="nofollow">[@name@] [@total@]</a>
 						[%else%]
-								<a href="[@url@]">[@name@] [@total@]</a>
+							<a href="[@url@]">[@name@] [@total@]</a>
 						[%/if%]
-						</li>
-				[%/param%]
-				[%param footer%]
+					</li>
+			[%/param%]
+			[%param footer%]
 				</ul>$7
-				[%/param%]
+			[%/param%]
 		[%/product_filter%]
 		"""
 
@@ -379,7 +379,7 @@
 		'body':"""
 		[%item_specifics id:'$1[@sku@]'%]
 			[%param *body%]
-					<p>$2[@itmspec_id@], [@itmspecval_id@], [@itmspec_name@], [@itmspecval_value@]</p>
+				<p>$2[@itmspec_id@], [@itmspecval_id@], [@itmspec_name@], [@itmspecval_value@]</p>
 			[%/param%]
 		[%/item_specifics%]
 		"""
@@ -428,9 +428,9 @@
 		'prefix':'product'
 		'body':"""
 		[%product sku:'$1'%]
-				[%param *body%]
-						$2
-				[%/param%]
+			[%param *body%]
+				$2
+			[%/param%]
 		[%/product%]
 		"""
 
@@ -452,24 +452,24 @@
 		'prefix':'extra_options'
 		'body':"""
 		[%extra_options id:'$1[@sku@]'%]
-				[%param *header%]
-					$2
-				[%/param%]
-				[%param *number_option%]
-					$3 [@name@], [@sku@]
-				[%/param%]
-				[%param *text_option%]
-					$4 [@name@], [@sku@]
-				[%/param%]
-				[%param *select_option%]
-					$5 [@name@], [@sku@]
-				[%/param%]
-				[%param *choices%]
-					$6 [@name@], [@sku@]
-				[%/param%]
-				[%param *footer%]
-					$7
-				[%/param%]
+			[%param *header%]
+				$2
+			[%/param%]
+			[%param *number_option%]
+				$3 [@name@], [@sku@]
+			[%/param%]
+			[%param *text_option%]
+				$4 [@name@], [@sku@]
+			[%/param%]
+			[%param *select_option%]
+				$5 [@name@], [@sku@]
+			[%/param%]
+			[%param *choices%]
+				$6 [@name@], [@sku@]
+			[%/param%]
+			[%param *footer%]
+				$7
+			[%/param%]
 		[%/extra_options%]
 		"""
 
@@ -482,7 +482,7 @@
 			[%param *body%]
 			 $1 [@voucher_title@] [@remain_amount@]
 			[%/param%]
-		[%/active_vouchers%]
+		[%/active_coupons%]
 		"""
 
 	'Cart Items':
@@ -490,10 +490,10 @@
 		'body':"""
 		[%cart_items%]
 			[%param *header%]
-					$1<h4>Cart Items</h4>
+				$1<h4>Cart Items</h4>
 			[%/param%]
 			[%param *body%]
-					$2<p><img src="[@thumb@]"/> [@qty@] x [@model@] x [@price@]</p>
+				$2<p><img src="[@thumb@]"/> [@qty@] x [@model@] x [@price@]</p>
 			[%/param%]
 			[%param *footer%]
 			[%/param%]
@@ -504,15 +504,15 @@
 		'prefix':'cart_item_components'
 		'body':"""
 		[%cart_item_components counter:'$1[@counter@]'%]
-				[%param *header%]
-					$2<h4>Cart Item Components</h4>
-				[%/param%]
-				[%param *body%]
-					$3<p>[@qty@] x [@model@]</p>
-				[%/param%]
-				[%param *footer%]
-					$4
-				[%/param%]
+			[%param *header%]
+				$2<h4>Cart Item Components</h4>
+			[%/param%]
+			[%param *body%]
+				$3<p>[@qty@] x [@model@]</p>
+			[%/param%]
+			[%param *footer%]
+				$4
+			[%/param%]
 		[%/cart_item_components%]
 		"""
 
@@ -578,7 +578,7 @@
 		'body':"""
 		[%show_standing_order id:'$1[@storder_id@]'%]
 			[%param *body%]
-					$2
+				$2
 			[%/param%]
 		[%/show_standing_order%]
 		"""
@@ -588,7 +588,7 @@
 		'body':"""
 		[%order_refunds id:'[@order_id@]'%]
 			[%param *body%]
-					<p>[@rma_id@], currently [@rma_status@], refunded [@refund_total@] on the [@date_issued@]</p>
+				<p>[@rma_id@], currently [@rma_status@], refunded [@refund_total@] on the [@date_issued@]</p>
 			[%/param%]
 		[%/order_refunds%]
 		"""
@@ -598,7 +598,7 @@
 		'body':"""
 		[%order_payment_history id:'$1[@order_id@]'%]
 			[%param *body%]
-					$2<p>[@payment_amount@] Paid on [@date_paid@] with method [@payment_name@]</p>
+				$2<p>[@payment_amount@] Paid on [@date_paid@] with method [@payment_name@]</p>
 			[%/param%]
 		[%/order_payment_history%]
 		"""
@@ -608,7 +608,7 @@
 		'body':"""
 		[%show_order id:'$1[@order_id@]'%]
 			[%param *body%]
-					$2[@ship_tracking@]
+				$2[@ship_tracking@]
 			[%/param%]
 		[%/show_order%]
 		"""
