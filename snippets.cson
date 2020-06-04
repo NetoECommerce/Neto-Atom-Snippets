@@ -215,10 +215,6 @@
 		'prefix':'nohtml'
 		'body':"[%nohtml%]$1[%/nohtml%]"
 
-	'Random Number':
-		'prefix':'random_number'
-		'body':"[%random_number length:'$1'/%]"
-
 	'Split':
 		'prefix':'split'
 		'body':"""
